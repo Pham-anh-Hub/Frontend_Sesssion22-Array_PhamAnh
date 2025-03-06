@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Khai báo mảng
+      const numbers = [1, 2, 3, 4, 5, 6];
+      console.log("number:", numbers);
+
+      //   const student = ["Nguyễn Văn A", "Nguyễn Văn B"];
+      //   // Truy cập vào các phần tử của mảng
+      //   console.log("Sinh viên tại vị trí 0: ", student[0]);
+      //   console.log("Sinh viên tại vị trí 1: ", student[1]);
+
+      const employee = ["Le Van A", "Nguyen Van B", "Le Van C"];
+      // Duyệt qua các phần tử của mảng - Dùng vòng lặp for
+      console.log(`-----Duyệt mảng bằng for thường-----`);
+      for (let i = 0; i < employee.length; i++) {
+        console.log(`Tại vị trí thứ ${i}- giá trị là: ${employee[i]}`);
+      }
+
+      //Duyệt qua mảng bằng vòng lặp for-in
+      console.log(`-----Duyệt mảng bằng for-in-----`);
+      for (const index in employee) {
+        console.log(`Tại vị trí thứ ${index}- giá trị là: ${employee[index]}`);
+      }
+
+      //Duyệt qua mảng bàng vòng lặp for-of
+      for (const element of employee) {
+        console.log(`element : ${element}`);
+      }
+
+      //Thêm phần tử vào mảng
+      const cards = [10000, 20000, 50000];
+      console.log("Mảng card trước khi thêm: ", cards);
+      cards.push(15000);
+      console.log("Mảng card sau khi thêm vào cuối: ", cards);
+      cards.unshift(25000);
+      console.log("Mảng card sau khi thêm vào đầu: ", cards);
+
+      //Xóa phần tử của mảng
+      console.log("Mảng card trước khi xóa: ", cards);
+      cards.pop(); // xóa phần tử cuối mảng
+      console.log("Mảng card sau khi xóa phần tử cuối mảng: ", cards);
+      cards.shift(); // xóa phần tử đầu mảng
+      console.log("Mảng card sau khi xóa phần tử đầu mảng: ", cards);
+
+      //Hàm splice() trong javascript
+      const menu = ["Add", "Update", "Delete"];
+      console.log("Mảng trước khi thêm: ", menu);
+
+      // Thêm các phần tử cuối mảng = spilce()
+      menu.splice(2, 0, "Search", "Sort");
+      console.log("Mảng sau khi thêm", menu);
+
+      //Cập nhật các phần tử trong mảng
+      menu.splice(1, 1, "Export excel");
+      console.log("Mảng sau khi cập nhật", menu);
+    </script>
+  </body>
+</html>
